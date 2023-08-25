@@ -1,13 +1,13 @@
-# Twitter Finetune
+# 트위터 미세 조정
 
-This repo shows how to finetune GPT-3.5-Turbo on tweets. Specifically, Elon Musk's tweets.
+이 리포지토리는 트윗에서 GPT-3.5-Turbo를 미세 조정하는 방법을 보여줍니다. 특히 Elon Musk의 트윗을 예로 들어 설명합니다.
 
-In this example, data is first exported from Twitter using [Apify](https://apify.com/).
-A copy of this data can be found in [dataset_twitter-scraper_2023-08-23_22-13-19-740.json](dataset_twitter-scraper_2023-08-23_22-13-19-740.json).
+이 예제에서는 먼저 [Apify](https://apify.com/)를 사용하여 트위터에서 데이터를 내보냅니다.
+이 데이터의 사본은 [dataset_twitter-scraper_2023-08-23_22-13-19-740.json](dataset_twitter-scraper_2023-08-23_22-13-19-740.json)에서 찾을 수 있습니다.
 
-This data is then loaded to a format with which it can be used to finetune a GPT-3.5-Turbo model, and is then used to do exactly that. This can be done by running `python ingest.py`.
+그런 다음 이 데이터를 GPT-3.5-Turbo 모델을 미세 조정하는 데 사용할 수 있는 형식으로 로드한 다음 정확히 그 작업을 수행하는 데 사용합니다. 이 작업은 `python ingest.py`를 실행하여 수행할 수 있습니다.
 
-A Streamlit app is this created to compare this finetuned model to a prompted GPT-3.5-Turbo model.
-This can be run with `streamlit run app.py`.
+이 미세 조정된 모델을 프롬프트된 GPT-3.5-Turbo 모델과 비교하기 위해 Streamlit 앱이 생성됩니다.
+이 앱은 `streamlit run app.py`로 실행할 수 있습니다.
 
-Access the final app hosted on Streamlit [here](https://elon-twitter-clone.streamlit.app/).
+Streamlit에서 호스팅되는 최종 앱 [여기](https://elon-twitter-clone.streamlit.app/)에 액세스합니다.
