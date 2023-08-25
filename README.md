@@ -7,6 +7,25 @@
 
 그런 다음 이 데이터를 GPT-3.5-Turbo 모델을 미세 조정하는 데 사용할 수 있는 형식으로 로드한 다음 정확히 그 작업을 수행하는 데 사용합니다. 이 작업은 `python ingest.py`를 실행하여 수행할 수 있습니다.
 
+예를 들어, 트윗의 "full_text"가 다음과 같다고 가정해 보겠습니다.
+
+```
+"full_text": "Next I’m buying Coca-Cola to put the cocaine back in"
+```
+
+이 경우, data 리스트의 한 원소는 다음과 같이 구성될 수 있습니다.
+
+```
+[
+  {"role": "system", "content": "write a tweet"},
+  {
+    "role": "user",
+    "content": {
+      "content": "Next I’m buying Coca-Cola to put the cocaine back in"
+    }
+  }
+]
+```
 이 미세 조정된 모델을 프롬프트된 GPT-3.5-Turbo 모델과 비교하기 위해 Streamlit 앱이 생성됩니다.
 이 앱은 `streamlit run app.py`로 실행할 수 있습니다.
 
